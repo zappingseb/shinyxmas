@@ -54,7 +54,9 @@ ui <- fluidPage(
       fluidRow(
         
         column(12,"Contact the app author (Sebastian Wolf) at:")
+        
       ),
+      tags$br(),
       # Additional information about the app author
       fluidRow(
         column(3,HTML('<a target="_new" href="https://linkedin.com/in/zappingseb"><i class="fab fa-linkedin"></i>&nbsp;zappingseb</a>')),
@@ -62,7 +64,7 @@ ui <- fluidPage(
         column(3,HTML('<a target="_new" href="https://medium.com/@zappingseb"><i class="fab fa-medium"></i>&nbsp;zappingseb</a>')),
         column(3,HTML('<a target="_new" href="https://www.mail-wolf.de"><i class="fas fa-globe"></i>&nbsp;mail-wolf.de</a>')) 
       ),
-      tags$br(),
+      tags$br(),tags$br(),
       fluidRow(
         column(12,
                
