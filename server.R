@@ -1,4 +1,6 @@
+library(magrittr)
 library(dplyr)
+library(shinyjs)
 library(stringr)
 library(glue)
 
