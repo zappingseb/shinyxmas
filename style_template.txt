@@ -1,0 +1,70 @@
+/* A CSS stylesheet that will be filled out by the glue package */
+
+.xmasTree {{
+  box-shadow: {color_0};
+}}
+
+body{{
+  -webkit-animation: snow {snowspeed}s linear  infinite ;
+  -moz-animation: snow {snowspeed}s linear  infinite ;
+  -ms-animation: snow {snowspeed}s linear  infinite ;
+  animation: snow {snowspeed}s linear  infinite ;
+}}
+
+@-webkit-keyframes xmasTree {{
+  25% {{
+    box-shadow: {color_25};
+  }}
+  50% {{
+    box-shadow: {color_50};
+  }}
+  75% {{
+    box-shadow: {color_75};
+  }}
+  100% {{
+    box-shadow: {color_100};
+  }}
+}}
+@-moz-keyframes xmasTree {{
+  25% {{
+    box-shadow: {color_25};
+  }}
+  50% {{
+    box-shadow: {color_50};
+  }}
+  75% {{
+    box-shadow: {color_75};
+  }}
+  100% {{
+    box-shadow: {color_100};
+  }}
+}}
+@-ms-keyframes xmasTree {{
+  25% {{
+    box-shadow: {color_25};
+  }}
+  50% {{
+    box-shadow: {color_50};
+  }}
+  75% {{
+    box-shadow: {color_75};
+  }}
+  100% {{
+    box-shadow: {color_100};
+  }}
+}}
+@keyframes xmasTree {{
+  25% {{
+    box-shadow: {color_25};
+  }}
+  50% {{
+    box-shadow: {color_50};
+  }}
+  75% {{
+    box-shadow: {color_75};
+  }}
+  100% {{
+    box-shadow:{color_100};
+  }}
+}}
+
