@@ -156,13 +156,13 @@ server <- function(input,output,session){
     assign("snowspeed",100/input$snow,envir = .GlobalEnv)
     
     # Paint rows with balls in random colors
-    css_list <- color_balls(row.ids = sample(possible_balls,input$bins,replace = F),
+    # Derive a CSS string from randomely colored balls
+    style_css <- color_balls(row.ids = sample(possible_balls,input$bins,replace = F),
                             list_of_styles = css_animation,
                             possible_balls = possible_balls
-    )
+    ) %>% derive_css()
     
-    # Derive a CSS string from randomely colored balls
-    style_css <- derive_css(css_list)
+    # style_css <- derive_css(css_list)
     
     # Repaint the xmasTree
     output$panel <- renderUI(
