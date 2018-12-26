@@ -69,13 +69,14 @@ a:link {
   width: 1em;
   height: 1em;
   position: absolute;
-  top: 30%;
-  left: 20%;
+  top: 00%;
+  left: 42%;
 }
 
 /* a wrapper around the tree to change its size */
 .wrapper {
   font-size: 1em;
+  min-height: 25em;
 }
 
 /* snowfall */
