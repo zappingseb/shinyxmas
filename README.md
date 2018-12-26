@@ -16,3 +16,5 @@ shiny::runApp()
 Very shiny holidays
 
 ![The app running](./images/app.jpg)
+
+https://sebastianwolf.shinyapps.io/shinyxmas/
