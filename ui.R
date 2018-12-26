@@ -1,3 +1,5 @@
+library(shiny)
+library(shinyjs)
 ui <- fluidPage(
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "https://use.fontawesome.com/releases/v5.6.3/css/all.css",
