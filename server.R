@@ -157,7 +157,7 @@ server <- function(input,output,session){
     
     # Paint rows with balls in random colors
     # Derive a CSS string from randomely colored balls
-    style_css <- color_balls(row.ids = sample(possible_balls,input$bins,replace = F),
+    style_css <<- color_balls(row.ids = sample(possible_balls,input$bins,replace = F),
                             list_of_styles = css_animation,
                             possible_balls = possible_balls
     ) %>% derive_css()
@@ -228,5 +228,24 @@ server <- function(input,output,session){
     
   })
   
-  
+  output$downloadData <- downloadHandler(
+      filename = function() {
+        paste('shinyxmas.html', sep='')
+      },
+      content = function(con) {
+        in_template <- readLines("template/export_template.html")
+        size <- input$size
+        
+        style_css <- paste0(style_css,glue("\n.wrapper{{font-size:{size}em;}}\n"))
+        
+        if(!input$checkbox){
+          style_css <- paste0(style_css,"\n",".xmasTree:before{content:''}\n")
+        }
+        if(!input$checkbox_move){
+          style_css <- paste0(style_css,"\n.xmasTree:before{animation:defect}\n")
+        }
+        in_template[126] <- style_css
+        writeLines(paste0(in_template,collapse="\n"),con)
+      }
+    )
 }

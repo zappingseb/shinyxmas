@@ -50,7 +50,8 @@ ui <- fluidPage(
                )
       ),
       
-      tags$br(),
+      downloadButton('downloadData', 'Download as HTML'),
+      tags$br(),tags$br(),
       fluidRow(
         
         column(12,"Contact the app author (Sebastian Wolf) at:")
